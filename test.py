@@ -2,10 +2,10 @@ import unittest
 
 from Tensor import getTensor
 
-class TestSum(unittest.TestCase):
+class TestTensor(unittest.TestCase):
     def test_trimming_data(self):
         """
-        Test that it can sum a list of integers
+        Test to check if the additional data is removed
         """
         arr = [0, 1, 2, 3, 4, 5, 0.1, 0.2, -3, -2, -1, 3, 2, 1] 
         shape = [5, 2]
@@ -19,7 +19,7 @@ class TestSum(unittest.TestCase):
 
     def test_padding_data(self):
         """
-        Test that it can sum a list of integers
+        Test to check if padding is applied to the data
         """
         arr = [0, 1, 2, 3, 4, 5, 0.1, 0.2, -3]
         shape = [2, 3, 2]
@@ -33,7 +33,7 @@ class TestSum(unittest.TestCase):
 
     def test_empty_shape(self):
         """
-        Test that it can sum a list of integers
+        Test to check for empty shape array
         """
         arr = [0, 1, 2, 3, 4, 5, 0.1, 0.2, -3, -2, -1, 3, 2, 1] 
         shape = []
@@ -47,7 +47,7 @@ class TestSum(unittest.TestCase):
 
     def test_nonint_shape(self):
         """
-        Test that it can sum a list of integers
+        Test to check for the case where the shape array is not an integer
         """
         arr = [0, 1, 2, 3, 4, 5, 0.1, 0.2, -3, -2, -1, 3, 2, 1] 
         shape = ["",5, 2]
